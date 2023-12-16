@@ -14,12 +14,15 @@ body {
     width: 100vw;
     height: 100vh;
 }
+
 /*<------------------ Header Section ------------------> */
-.header-section{
-        background-color: var(--bg-primary);
+.container{
         padding: 15px 80px;
         margin-right: auto;
         margin-left: auto;
+}
+.header-section{
+        background-color: var(--bg-primary);
 }
 .header-container{
         display: flex;
@@ -28,6 +31,7 @@ body {
 }
 .brand{
         color: var(--text-primary);
+        font-size: 25px;
 }
 .nav-options{
         display: flex;
@@ -50,3 +54,53 @@ body {
         background-color: var(--bg-secondary);
         text-decoration: none;
 }
+.nav-icon{
+        display: none;
+}
+
+@media (576px <= width <= 768px) {
+        .container{
+                padding: 15px 20px;
+        }
+        .brand{
+                font-size: 18px;
+        }
+        .nav-options{
+                gap: 4px;
+                font-size: 18px;
+        }
+        .nav-items a{
+                padding: 6px;
+                height: 15px; width: 63px;
+        }
+}
+@media (width < 576px) {
+        .container{
+                padding: 15px 20px;
+        }
+        .header-container{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+        }
+        .nav-options{
+                display: none;
+                position: absolute;
+                background-color: var(--bg-primary);
+                min-width: 150px;
+                margin-top: 40px;
+                margin-left: 290px;
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                z-index: 1;
+        }
+        .nav-icon{
+                display: block;
+                width: 50px;
+                height: 40px;
+                font-weight: bold;
+                font-size: 30px;
+                color: var(--text-primary);
+                background-color: transparent;
+        }
+}
+   
