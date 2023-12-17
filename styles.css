@@ -29,12 +29,30 @@ body {
 ::-webkit-scrollbar-thumb:hover {
         background: #b30000; 
 }
-/*<------------------ Header Section ------------------> */
 .container{
         padding: 15px 80px 5px 80px;
         margin-right: auto;
         margin-left: auto;
 }
+.section-header{
+        font-size: 40px;
+        text-align: center;
+        color: var(--text-secondary);
+        text-shadow:  2px 0px black;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+@media (576px <= width <= 768px) {
+        .container{
+                padding: 15px 20px;
+        }
+}
+@media (width < 576px) {
+        .container{
+                padding: 15px 20px;
+        }
+}
+/*<------------------ Header Section ------------------> */
 .header-section{
         background-color: var(--bg-primary);
 }
@@ -73,9 +91,6 @@ body {
 }
 
 @media (576px <= width <= 768px) {
-        .container{
-                padding: 15px 20px;
-        }
         .brand{
                 font-size: 18px;
         }
@@ -89,9 +104,6 @@ body {
         }
 }
 @media (width < 576px) {
-        .container{
-                padding: 15px 20px;
-        }
         .header-container{
                 display: flex;
                 flex-direction: row;
@@ -191,4 +203,38 @@ body {
         .banner-button{
                 width: 150px;
         }
+}
+/*<------------------ Recipes Section ------------------> */
+.recipes-container{
+        display: grid;
+        padding: 20px;
+        grid-template-columns: auto auto auto;
+        gap: 2rem;
+}
+.recipe-card{
+        display: grid;
+        grid-template-rows: auto auto auto;
+        row-gap: 1rem;
+        background:radial-gradient(white,var(--bg-secondary));
+        border: 2px solid var(--bg-primary);
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 2px 3px 0px, rgba(60, 64, 67, 0.15) 0px 2px 4px 2px;
+        padding: 15px;
+        text-align: center;
+        border-radius: 10px;
+}
+.recipe-img{
+        width: 100%;
+        border-radius: 25px;
+        height: 130px;
+        box-shadow: 0 0 8px 8px white inset;
+}
+.recipe-info{
+        display: flex;
+        justify-content: space-between;
+}
+.recipe-card h3{
+        font-family: cursive;
+        color: var(--bg-primary);
+        font-weight: bolder;
+        font-size: 20px;
 }
