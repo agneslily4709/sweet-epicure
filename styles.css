@@ -238,3 +238,13 @@ body {
         font-weight: bolder;
         font-size: 20px;
 }
+@media (576px <= width <= 768px){
+        .recipes-container{
+                grid-template-columns: auto auto;
+        }
+}
+@media (width < 576px) {
+        .recipes-container{
+                grid-template-columns: auto;
+        }
+}
