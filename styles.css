@@ -59,53 +59,28 @@ body {
     .section-header::after {
         margin-left: 0.5em;
     }
-    .sine-wave,
-.cosine-wave {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-}
-
-.sine-wave {
-    animation: sineAnimation 5s linear infinite;
-}
-
-.cosine-wave {
-    animation: cosineAnimation 5s linear infinite;
-}
-    @keyframes sineAnimation {
-        0% {
-            transform: scaleY(1) translateY(0);
-        }
-        50% {
-            transform: scaleY(2) translateY(-25px);
-        }
-        100% {
-            transform: scaleY(1) translateY(0);
-        }
-    }
-    
-    @keyframes cosineAnimation {
-        0% {
-            transform: scaleY(1) translateY(0);
-        }
-        50% {
-            transform: scaleY(2) translateY(-25px);
-        }
-        100% {
-            transform: scaleY(1) translateY(0);
-        }
-    }
 @media (576px <= width <= 768px) {
         .container{
                 padding: 15px 20px;
+        }
+        .section-header{
+                font-size: 23px;
+        }
+        .section-header::before,
+        .section-header::after {
+                content: "∼∼∼∼∼∼∼∼∼∼";
         }
 }
 @media (width < 576px) {
         .container{
                 padding: 15px 20px;
+        }
+        .section-header{
+                font-size: 20px;
+        }
+        .section-header::before,
+        .section-header::after {
+                content: "∼∼∼∼∼";
         }
 }
 /*<------------------ Header Section ------------------> */
@@ -366,7 +341,7 @@ body {
                 grid-template-columns: auto 200px;
         }
 }
-/*<------------------ Review Section ------------------> */
+/*<------------------ Contact Section ------------------> */
 .contact-container{
         display: flex;
         flex-direction: column;
@@ -384,4 +359,9 @@ body {
         border: 2px solid red;
         border-radius: 50%;
         padding: 10px;
+}
+@media (width < 576px) {
+        .contact-socials{
+                gap: 10px;
+        }
 }
