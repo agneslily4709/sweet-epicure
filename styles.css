@@ -274,3 +274,39 @@ body {
                 font-size: 14px;
         }
 }
+/*<------------------ About Section ------------------> */
+
+.review-box{
+        display: grid;
+        grid-template-columns: auto 300px;
+        gap: 2rem;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+}
+.review-profile{
+        height: 150px;
+        border-radius: 50%;
+        width: 150px;
+}
+.fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+}    
+@media (576px <= width <= 768px){
+        .review-box{
+                font-size: 15px;
+                grid-template-columns: auto 300px;
+        }
+}
+@media (width < 576px) {
+        .review-profile{
+                height: 100px;
+                width: 100px;
+        }
+        .review-box{
+                font-size: 14px;
+                grid-template-columns: auto 200px;
+        }
+}
