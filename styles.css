@@ -248,3 +248,13 @@ body {
                 grid-template-columns: auto;
         }
 }
+/*<------------------ About Section ------------------> */
+
+.about-container{
+        display: grid;
+        grid-template-columns: auto auto;
+}
+.about-para{
+        padding: 20px;
+        font-size: 20px;
+}
