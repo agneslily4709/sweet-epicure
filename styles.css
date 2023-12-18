@@ -248,3 +248,29 @@ body {
                 grid-template-columns: auto;
         }
 }
+/*<------------------ About Section ------------------> */
+
+.about-container{
+        display: grid;
+        grid-template-columns: auto auto;
+}
+.about-para{
+        padding: 20px;
+        font-size: 20px;
+}
+@media (576px <= width <= 768px){
+        .about-container img{
+                display: none;
+        }
+        .about-para{
+                font-size: 15px;
+        }
+}
+@media (width < 576px) {
+        .about-container img{
+                display: none;
+        }
+        .about-para{
+                font-size: 14px;
+        }
+}
