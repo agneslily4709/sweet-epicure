@@ -40,16 +40,47 @@ body {
         color: var(--text-secondary);
         text-shadow:  2px 0px black;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
 }
+    
+    .section-header::before,
+    .section-header::after {
+        content: "∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼∼";
+        font-size: 30px;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: var(--text-secondary); 
+        overflow: hidden;
+    }
+    .section-header::before {
+        margin-right: 0.5em;
+    }
+    
+    .section-header::after {
+        margin-left: 0.5em;
+    }
 @media (576px <= width <= 768px) {
         .container{
                 padding: 15px 20px;
+        }
+        .section-header{
+                font-size: 23px;
+        }
+        .section-header::before,
+        .section-header::after {
+                content: "∼∼∼∼∼∼∼∼∼∼";
         }
 }
 @media (width < 576px) {
         .container{
                 padding: 15px 20px;
+        }
+        .section-header{
+                font-size: 20px;
+        }
+        .section-header::before,
+        .section-header::after {
+                content: "∼∼∼∼∼";
         }
 }
 /*<------------------ Header Section ------------------> */
@@ -274,7 +305,7 @@ body {
                 font-size: 14px;
         }
 }
-/*<------------------ About Section ------------------> */
+/*<------------------ Review Section ------------------> */
 
 .review-box{
         display: grid;
@@ -308,5 +339,29 @@ body {
         .review-box{
                 font-size: 14px;
                 grid-template-columns: auto 200px;
+        }
+}
+/*<------------------ Contact Section ------------------> */
+.contact-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+}
+.contact-socials{
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+        gap: 3rem;       
+}
+.contact-socials i{
+        border: 2px solid red;
+        border-radius: 50%;
+        padding: 10px;
+}
+@media (width < 576px) {
+        .contact-socials{
+                gap: 10px;
         }
 }
