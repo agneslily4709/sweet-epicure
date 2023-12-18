@@ -181,4 +181,19 @@ setInterval(() => {
             else reviewBox.setAttribute("idx", idx + 1);
         }, 500); // Adjust the time to match the CSS transition duration
     }, 7000);
-    
+    const images = [
+        "./Assets/Banner-1.png",
+        "./Assets/Banner-2.png",
+        "./Assets/Banner-3.png",
+        "./Assets/Banner-4.png",
+        "./Assets/Banner-5.png"
+    ]
+    const bannerImg = document.getElementById("bannerImg")
+
+    let currentIndex = 0;
+    function changeImage() {
+        currentIndex = (currentIndex+1) % images.length;
+        bannerImg.src = images[currentIndex];
+      }
+
+    setInterval(changeImage, 4000);
